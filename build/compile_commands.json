@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/varvara/mipt/spotivar/lib/flac_reader/b",
+  "command": "/usr/bin/clang++ -DFLAC__NO_DLL -g -o CMakeFiles/reader.dir/main.cpp.o -c /home/varvara/mipt/spotivar/lib/flac_reader/main.cpp",
+  "file": "/home/varvara/mipt/spotivar/lib/flac_reader/main.cpp"
+},
+{
+  "directory": "/home/varvara/mipt/spotivar/lib/flac_reader/b",
+  "command": "/usr/bin/clang++ -DFLAC__NO_DLL -g -o CMakeFiles/reader.dir/FLAC_track_info.cpp.o -c /home/varvara/mipt/spotivar/lib/flac_reader/FLAC_track_info.cpp",
+  "file": "/home/varvara/mipt/spotivar/lib/flac_reader/FLAC_track_info.cpp"
+}
+]

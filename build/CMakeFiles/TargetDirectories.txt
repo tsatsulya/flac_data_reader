@@ -1,0 +1,3 @@
+/home/varvara/mipt/spotivar/lib/flac_reader/b/CMakeFiles/reader.dir
+/home/varvara/mipt/spotivar/lib/flac_reader/b/CMakeFiles/edit_cache.dir
+/home/varvara/mipt/spotivar/lib/flac_reader/b/CMakeFiles/rebuild_cache.dir
