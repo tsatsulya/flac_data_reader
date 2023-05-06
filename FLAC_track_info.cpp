@@ -65,11 +65,11 @@ FLAC_info read_flac_info(const char *path_to_file) {
 }
 
 
-void print_flac_info(FLAC_info *track_info) {
+void print_flac_info(FLAC_info &track_info) {
 
 	std::cout << "\n________________FLAC_FILE_INFO________________\n" << std::endl;
 	for (auto& field_data : fields) 
-		std::cout << field_data << " -- " << (*track_info).*metadata[field_data] << std::endl;
+		std::cout << field_data << " -- " << track_info.*metadata[field_data] << std::endl;
 	
 	std::cout << "_______________________________________________\n" << std::endl;
 
