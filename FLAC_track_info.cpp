@@ -3,14 +3,14 @@
 #include <algorithm>
 #include <map>
 
-static std::map<std::string, std::string FLAC_track_info::*> metadata = {
-    {"TITLE",  &FLAC_track_info::title},
-    {"ARTIST", &FLAC_track_info::artist},
-    {"ALBUM",  &FLAC_track_info::album}, 
-    {"COMMENT", &FLAC_track_info::comment},
-    {"DATE", &FLAC_track_info::date},
-    {"GENRE", &FLAC_track_info::genre},
-    {"ALBUM_ARTIST", &FLAC_track_info::album_artist},
+static std::map<std::string, std::string FLAC_info::*> metadata = {
+    {"TITLE",  &FLAC_info::title},
+    {"ARTIST", &FLAC_info::artist},
+    {"ALBUM",  &FLAC_info::album}, 
+    {"COMMENT", &FLAC_info::comment},
+    {"DATE", &FLAC_info::date},
+    {"GENRE", &FLAC_info::genre},
+    {"ALBUM_ARTIST", &FLAC_info::album_artist},
 };
 
 
@@ -33,7 +33,7 @@ bool FLAC_extract_fields_info(std::vector<std::string> *data_fields, std::map <s
 static const std::vector<std::string> fields = {"TITLE", "ARTIST", "ALBUM", "COMMENT", "DATE", "GENRE", "ALBUM_ARTIST"};
 
 
-void FLAC_fill_track_info(FLAC_track_info *track_info, std::map <std::string, std::string> *data_fields_info) {
+void FLAC_fill_track_info(FLAC_info *track_info, std::map <std::string, std::string> *data_fields_info) {
 
 	for (auto& field_data : *data_fields_info) 
 		if (std::count(fields.begin(), fields.end(), field_data.first)) 
@@ -41,7 +41,7 @@ void FLAC_fill_track_info(FLAC_track_info *track_info, std::map <std::string, st
 }
 
 
-void FLAC_read_track_info(const char *path_to_file, FLAC_track_info *track_info) {
+void read_flac_info(const char *path_to_file, FLAC_info *track_info) {
 	
 	FLAC__StreamMetadata* tags;
 
@@ -64,7 +64,7 @@ void FLAC_read_track_info(const char *path_to_file, FLAC_track_info *track_info)
 }
 
 
-void FLAC_print_track_info(FLAC_track_info *track_info) {
+void print_flac_info(FLAC_info *track_info) {
 
 	std::cout << "\n________________FLAC_FILE_INFO________________\n" << std::endl;
 	for (auto& field_data : fields) 

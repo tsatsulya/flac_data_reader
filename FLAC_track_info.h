@@ -3,7 +3,7 @@
 #include "FLAC/metadata.h"
 #include <iostream>
 
-struct FLAC_track_info {
+struct FLAC_info {
     uint64_t hash;
     std::string title = "unknown title";
     std::string artist = "unknown artist";
@@ -16,5 +16,5 @@ struct FLAC_track_info {
 };
 
 
-void FLAC_read_track_info(const char *path_to_file, FLAC_track_info *track_info);
-void FLAC_print_track_info(FLAC_track_info *track_info);
+void read_flack_info(const char *path_to_file, FLAC_info *track_info);
+void print_flack_info(FLAC_info *track_info);
