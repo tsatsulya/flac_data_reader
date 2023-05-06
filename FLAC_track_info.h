@@ -16,5 +16,5 @@ struct FLAC_info {
 };
 
 
-void read_flack_info(const char *path_to_file, FLAC_info *track_info);
+FLAC_info read_flack_info(const char *path_to_file);
 void print_flack_info(FLAC_info *track_info);

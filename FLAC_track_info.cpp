@@ -40,9 +40,10 @@ void FLAC_fill_track_info(FLAC_info *track_info, std::map <std::string, std::str
 }
 
 
-void read_flac_info(const char *path_to_file, FLAC_info *track_info) {
+FLAC_info read_flac_info(const char *path_to_file) {
 	
 	FLAC__StreamMetadata* tags;
+	FLAC_info track_info;
 
 	if (!path_to_file || !tags) { } //<------- 	exception!!!!!!!!!
 
@@ -57,7 +58,8 @@ void read_flac_info(const char *path_to_file, FLAC_info *track_info) {
 		std::map <std::string, std::string> data_fields_info;
 		FLAC_extract_fields_info(&data_fields, &data_fields_info); //<-----!!!
 
-		FLAC_fill_track_info(track_info, &data_fields_info);
+		FLAC_fill_track_info(&track_info, &data_fields_info);
+		return track_info;
 	}
 	else {} //<------- 	exception!!!!!!!!!
 }
