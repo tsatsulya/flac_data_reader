@@ -10,7 +10,6 @@ static std::map<std::string, std::string FLAC_info::*> metadata = {
     {"COMMENT", &FLAC_info::comment},
     {"DATE", &FLAC_info::date},
     {"GENRE", &FLAC_info::genre},
-    {"ALBUM_ARTIST", &FLAC_info::album_artist},
 };
 
 
@@ -30,7 +29,7 @@ bool FLAC_extract_fields_info(std::vector<std::string> *data_fields, std::map <s
 }
 
 
-static const std::vector<std::string> fields = {"TITLE", "ARTIST", "ALBUM", "COMMENT", "DATE", "GENRE", "ALBUM_ARTIST"};
+static const std::vector<std::string> fields = {"TITLE", "ARTIST", "ALBUM", "COMMENT", "DATE", "GENRE"};
 
 
 void FLAC_fill_track_info(FLAC_info *track_info, std::map <std::string, std::string> *data_fields_info) {

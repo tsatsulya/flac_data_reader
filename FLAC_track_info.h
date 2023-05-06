@@ -10,8 +10,8 @@ struct FLAC_info {
     std::string album = "unknown album";
     std::string comment = "empty comment";
     std::string date = "00_00_00";
+    std::string year = "0000";
     std::string genre = "unknown genre";
-    std::string album_artist = "unknown album_artist";
     //picture - ?????????
 };
 
